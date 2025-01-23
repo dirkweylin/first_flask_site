@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {% block content %}
+    <form action="{{ url_for('views.name_input') }}" method="POST">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="fname" placeholder="first name">
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lname" placeholder="last name">
+    <button type="submit">Login</button>
+    <script 
+    type="text/javascript" 
+    src="{{ url_for('static', filename='index.js')}}"></script>
+    {% endblock %}
+</body>
+</html>

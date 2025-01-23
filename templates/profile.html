@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Hello {{ first_name }} {{ last_name }}</h1>
+<script>
+    window.onbeforeunload = function() {
+        fetch('/clear-session', { method: 'POST' });
+    };
+</script>
+{% endblock %}
